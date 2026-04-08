@@ -2,14 +2,18 @@
 layout: archive
 title: "Publications"
 permalink: /publications/
-author_profile: true
+author_profile: false
 ---
 
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
 {% endif %}
 
 {% include base_path %}
+
+<div id="active-filter-container" style="display: none; margin-bottom: 20px; padding: 15px; border-radius: 4px; background-color: var(--global-bg-color, #f4f4f4); border-left: 4px solid var(--global-theme-color, #4a90e2);">
+  <strong>Active Filter:</strong> <span id="active-filter-label" style="margin-left: 10px; font-weight: normal;"></span>
+  <button onclick="clearFilters()" style="margin-left: 15px; background: var(--global-theme-color, #4a90e2); color: white; border: none; padding: 5px 12px; border-radius: 4px; cursor: pointer;"><i class="fa fa-times"></i> Clear Filter</button>
+</div>
 
 <!-- New style rendering if publication categories are defined -->
 {% if site.publication_category %}
@@ -32,5 +36,29 @@ author_profile: true
   {% endfor %}
 {% endif %}
 
+<script>
+function filterPublications(type, value) {
+  var container = document.getElementById('active-filter-container');
+  var label = document.getElementById('active-filter-label');
+  var items = document.querySelectorAll('.list__item');
+  
+  container.style.display = 'block';
+  label.innerHTML = type === 'venue' ? '<i class="fa fa-book"></i> ' + value : '<i class="fa fa-calendar"></i> ' + value;
+  
+  items.forEach(function(item) {
+    var match = false;
+    if (type === 'venue' && item.getAttribute('data-venue') === value) match = true;
+    if (type === 'year' && item.getAttribute('data-year') === value) match = true;
+    
+    item.style.display = match ? '' : 'none';
+  });
+}
 
-
+function clearFilters() {
+  document.getElementById('active-filter-container').style.display = 'none';
+  var items = document.querySelectorAll('.list__item');
+  items.forEach(function(item) {
+    item.style.display = '';
+  });
+}
+</script>

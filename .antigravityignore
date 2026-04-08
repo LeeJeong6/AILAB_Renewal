@@ -1,0 +1,10 @@
+.venv/
+venv/
+env/
+node_modules/
+.git/
+build/
+dist/
+*.log
+*.csv
+*.jsonl

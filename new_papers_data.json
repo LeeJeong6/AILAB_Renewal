@@ -1,0 +1,37 @@
+[
+  {
+    "title": "See, Hear, and Understand: Benchmarking Audiovisual Human Speech Understanding in Multimodal Large Language Models",
+    "arxiv_id": "2512.02231",
+    "published": "2025-12-01",
+    "authors": [
+      "Le Thien Phuc Nguyen",
+      "Zhuoran Yu",
+      "Samuel Low Yu Hang",
+      "Subin An",
+      "Jeongik Lee",
+      "Yohan Ban",
+      "SeungEun Chung",
+      "Thanh-Huy Nguyen",
+      "JuWan Maeng",
+      "Soochahn Lee",
+      "Yong Jae Lee"
+    ],
+    "pdfurl": "https://arxiv.org/pdf/2512.02231.pdf",
+    "htmlurl": "https://arxiv.org/abs/2512.02231"
+  },
+  {
+    "title": "Contamination Detection for VLMs using Multi-Modal Semantic Perturbation",
+    "arxiv_id": "2511.03774",
+    "published": "2025-11-05",
+    "authors": [
+      "Jaden Park",
+      "Mu Cai",
+      "Feng Yao",
+      "Jingbo Shang",
+      "Soochahn Lee",
+      "Yong Jae Lee"
+    ],
+    "pdfurl": "https://arxiv.org/pdf/2511.03774.pdf",
+    "htmlurl": "https://arxiv.org/abs/2511.03774"
+  }
+]

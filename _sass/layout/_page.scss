@@ -18,9 +18,7 @@
 
 .page {
   @include breakpoint($large) {
-    @include span(10 of 12 last);
-    @include prefix(0.5 of 12);
-    @include suffix(2 of 12);
+    @include span(12 of 12);
   }
 
   .page__inner-wrap {
@@ -57,6 +55,13 @@
 
   p, li, dl {
     font-size: 1em;
+  }
+
+  /* Smaller body text for publication detail pages */
+  .publication-detail & {
+    p, li, dl {
+      font-size: 0.85em;
+    }
   }
 
   /* paragraph indents */
@@ -104,6 +109,28 @@
   blockquote + .small {
     margin-top: -1.5em;
     padding-left: 1.25rem;
+  }
+
+  /* Image captions - italic text immediately following an image */
+  img + em,
+  img + br + em {
+    display: block;
+    text-align: center;
+    font-size: 0.9em;
+    color: var(--global-text-color-light);
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+  }
+
+  /* TL;DR blockquote - first blockquote in publication pages */
+  > blockquote:first-child {
+    background: var(--global-code-bg-color, #f0f7ff);
+    border-left: 4px solid var(--global-link-color, #2196F3);
+    padding: 1em 1.2em;
+    margin: 0 0 1.5em 0;
+    font-size: 1.05em;
+    font-style: normal;
+    border-radius: 0 4px 4px 0;
   }
 }
 

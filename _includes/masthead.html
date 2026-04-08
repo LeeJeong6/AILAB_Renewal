@@ -6,7 +6,7 @@
         <button><span class="navicon"></span></button>
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg persist {% if page.url == '/' or page.url == '/index.html' %}selected{% endif %}">
-            <a href="{{ base_path }}/">{{ site.title }}</a>
+            <a href="{{ base_path }}/"><img src="{{ base_path }}/images/logo.png" alt="{{ site.title }}" style="max-height: 40px; vertical-align: middle; filter: invert(30%) sepia(26%) saturate(1915%) hue-rotate(185deg) brightness(97%) contrast(92%);" /></a>
           </li>
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
@@ -14,7 +14,17 @@
             {% else %}
               {% assign domain = base_path %}
             {% endif %}
-            <li class="masthead__menu-item {% if page.url contains link.url and link.url != '/' %}selected{% endif %}">
+            {% assign is_selected = false %}
+            {% assign is_exact = false %}
+            {% if page.url == link.url %}
+              {% assign is_selected = true %}
+              {% assign is_exact = true %}
+            {% elsif page.url contains link.url and link.url != '/' %}
+              {% assign is_selected = true %}
+            {% elsif link.url == '/publications/' and page.collection == 'publications' %}
+              {% assign is_selected = true %}
+            {% endif %}
+            <li class="masthead__menu-item {% if is_selected %}selected{% endif %} {% if is_exact %}exact{% endif %}">
               <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
             </li>
           {% endfor %}

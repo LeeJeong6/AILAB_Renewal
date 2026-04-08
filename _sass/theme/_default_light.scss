@@ -2,12 +2,12 @@
     DEFAULT THEME - LIGHT VERSION
     ========================================================================== */
 /* Color codes used for the theme */
-$primary-color              : #2f7f93;
-$gray                       : #7a8288;
-$dark-gray                  : mix(#000, $gray, 40%);
-$darker-gray                : mix(#000, $gray, 60%);
-$light-gray                 : mix(#fff, $gray, 50%);
-$lighter-gray               : mix(#fff, $gray, 90%);
+$primary-color              : #1A365D; // Deep corporate blue
+$gray                       : #4A5568; // Softer, more pleasing gray
+$dark-gray                  : #2D3748; // Strong dark text color
+$darker-gray                : #1A202C; // Near black for absolute contrast
+$light-gray                 : #E2E8F0; // Bright subtle gray borders
+$lighter-gray               : #F7FAFC; // Very light gray background
 
 /* Color codes used for the site */
 $danger-color               : #ee5f5b;
@@ -17,9 +17,9 @@ $success-color              : #62c462;
 $warning-color              : #f89406;
 
 /* Other basic settings for the template */
-$border-radius              : 4px;
-$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
-$global-transition          : all 0.2s ease-in-out;
+$border-radius              : 6px;     // Slightly more modern uniform border-radius
+$box-shadow                 : 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); // Sleek modern shadow
+$global-transition          : all 0.3s cubic-bezier(0.4, 0, 0.2, 1); // Butter smooth transitions
 $masthead-height            : 70px;
 $navicon-width              : 28px;
 $navicon-height             : 4px;
@@ -35,14 +35,14 @@ $sidebar-screen-min-width   : 1024px;
     --global-dark-border-color          : #bdc1c4;
     --global-code-background-color      : #fafafa;
     --global-code-text-color            : #{$darker-gray};
-    --global-fig-caption-color          : mix(#fff,  #{$dark-gray}, 25%);
-    --global-link-color                 : #52adc8;
-    --global-link-color-hover           : mix(#000, #2f7f93, 25%);
-    --global-link-color-visited         : mix(#fff, #2f7f93, 25%);  
-    --global-masthead-link-color        : #{$dark-gray};
-    --global-masthead-link-color-hover  : mix(#000, #{$gray}, 25%);    
-    --global-text-color                 : #{$dark-gray};
-    --global-text-color-light           : #{$light-gray};
+    --global-fig-caption-color          : mix(#fff, #2D3748, 25%);
+    --global-link-color                 : #3182CE; // Vibrant interactive link
+    --global-link-color-hover           : #2B6CB0; // Darker interaction on hover
+    --global-link-color-visited         : #3182CE; // Same as link color to avoid jarring purples
+    --global-masthead-link-color        : #2D3748; // Clean masthead text
+    --global-masthead-link-color-hover  : #3182CE; // Highlight interactive links
+    --global-text-color                 : #2D3748; // Sleek modern font body color
+    --global-text-color-light           : #{$gray};
     --global-thead-color                : #{$lighter-gray};
 }
 

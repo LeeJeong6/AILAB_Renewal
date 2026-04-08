@@ -1,0 +1,16 @@
+---
+layout: archive
+permalink: /gallery/
+title: "Gallery"
+author_profile: false
+---
+
+{% include base_path %}
+
+{% assign gallery_items = site.gallery | sort: 'order' %}
+
+<div class="grid__wrapper">
+{% for post in gallery_items %}
+  {% include archive-single.html %}
+{% endfor %}
+</div>

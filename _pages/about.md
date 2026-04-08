@@ -29,7 +29,7 @@ Our current research topics include:
       </h3>
       <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {{ post.date | date: "%B %d, %Y" }}</p>
       {% if post.excerpt %}
-        <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>
+        <div class="archive__item-content" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</div>
       {% endif %}
     </article>
   {% endfor %}

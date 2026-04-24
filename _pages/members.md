@@ -79,12 +79,6 @@ author_profile: false
     <div class="member-email"><a href="mailto:20161699@kookmin.ac.kr" title="20161699@kookmin.ac.kr"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></div>
   </div>
   <div class="member-card">
-    <img src="/images/members/member_04.jpg" class="member-photo" alt="정승은 SeungEun Chung">
-    <div class="member-name">정승은<br>SeungEun Chung</div>
-    <div class="member-title">M.S.</div>
-    <div class="member-email"><a href="mailto:agjung0222@kookmin.ac.kr" title="agjung0222@kookmin.ac.kr"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></div>
-  </div>
-  <div class="member-card">
     <img src="/images/members/member_05.jpeg" class="member-photo" alt="반요한 Yohan Ban">
     <div class="member-name">반요한<br>Yohan Ban</div>
     <div class="member-title">M.S.</div>
@@ -100,6 +94,11 @@ author_profile: false
 
 ## Alumni
 <div class="member-grid">
+  <div class="member-card">
+    <img src="/images/members/member_04.jpg" class="member-photo" alt="정승은 SeungEun Chung">
+    <div class="member-name">정승은<br>SeungEun Chung</div>
+    <div class="member-title">M.S.</div>
+  </div>
   <div class="member-card">
     <img src="/images/members/member_07.jpeg" class="member-photo" alt="맹주완 Juwan Maeng">
     <div class="member-name">맹주완<br>Juwan Maeng</div>

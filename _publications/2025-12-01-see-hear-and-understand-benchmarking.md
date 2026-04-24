@@ -5,8 +5,11 @@ date: 2025-12-01
 venue: 'arXiv preprint'
 excerpt: 'Le Thien Phuc Nguyen, Zhuoran Yu, **Samuel Low Yu Hang**, **Subin An**, **Jeongik Lee**, **Yohan Ban**, **SeungEun Chung**, Thanh-Huy Nguyen, **JuWan Maeng**, **Soochahn Lee**, Yong Jae Lee'
 titleurl: 'https://plnguyen2908.github.io/AV-SpeakerBench-project-page/'
+thumbnail: '/images/publications/2025-12-01-see-hear-and-understand-benchmarking-fig1.png'
 htmlurl: 'https://arxiv.org/abs/2512.02231'
 pdfurl: 'https://arxiv.org/pdf/2512.02231.pdf'
+codeurl: https://github.com/plnguyen2908/AV-SpeakerBench
+dataseturl: https://huggingface.co/datasets/plnguyen2908/AV-SpeakerBench
 bibtex: |
     @article{nguyen2025see,
       title={See, Hear, and Understand: Benchmarking Audiovisual Human Speech Understanding in Multimodal Large Language Models},
@@ -40,4 +43,4 @@ The paper introduces a comprehensive benchmark that tests audiovisual human spee
 This benchmark fills a critical gap in evaluating multimodal AI, pushing the field toward models that can understand human communication as holistically as people do.
 
 <!-- TODO: Add key figures from the paper -->
-<!-- ![Figure description](/images/publications/2025-12-01-see-hear-and-understand-benchmarking-fig1.png) -->
+![Figure description](/images/publications/2025-12-01-see-hear-and-understand-benchmarking-fig1.png)

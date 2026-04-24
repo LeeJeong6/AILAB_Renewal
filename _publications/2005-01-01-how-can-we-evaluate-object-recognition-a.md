@@ -2,8 +2,9 @@
 title: "How Can We Evaluate Object Recognition Algorithms Using a Public Object Image Database?"
 collection: publications
 date: 2005-01-01
-venue: 'IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)'
+venue: 'IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshop (CVPRW)'
 excerpt: '**Soochahn Lee**, Duck Hoon Kim, Sang Uk Lee, Il Dong Yun'
+thumbnail: '/images/publications/2005-01-01-how-can-we-evaluate-object-recognition-a-fig1.png'
 pdfurl: 'https://drive.google.com/file/d/15XMYxa9Oig8ml6EJXyUVvNobJBUug9os/view'
 htmlurl: 'https://ieeexplore.ieee.org/document/1565335'
 bibtex: |

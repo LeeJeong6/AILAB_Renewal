@@ -7,6 +7,7 @@ excerpt: 'Seung Yeon Shin, **Soochahn Lee**, Il Dong Yun, Sun Mi Kim, Kyoung Mu 
 codeurl: 'https://github.com/syshin1014/wssdl_bus'
 pdfurl: 'https://drive.google.com/file/d/1AVp792-GF3oFo0UbFbc5Lep4rFIt7MrF/view'
 htmlurl: 'https://ieeexplore.ieee.org/document/8471199'
+thumbnail: '/images/publications/2019-03-01-joint-weakly-and-semi-supervised-deep-le-fig2.png' 
 bibtex: |
     @article{Shin_2019, title={Joint Weakly and Semi-Supervised Deep Learning for Localization and Classification of Masses in Breast Ultrasound Images}, volume={38}, ISSN={1558-254X}, url={http://dx.doi.org/10.1109/tmi.2018.2872031}, DOI={10.1109/tmi.2018.2872031}, number={3}, journal={IEEE Transactions on Medical Imaging}, publisher={Institute of Electrical and Electronics Engineers (IEEE)}, author={Shin, Seung Yeon and Lee, Soochahn and Yun, Il Dong and Kim, Sun Mi and Lee, Kyoung Mu}, year={2019}, month=mar, pages={762–774} }
 citation_mla: |
@@ -23,15 +24,22 @@ citation_mla: |
 
 ## What this paper is about
 
+![Figure description](/images/publications/2019-03-01-joint-weakly-and-semi-supervised-deep-le-fig1.png)
+*Example of breast ultrasound images with masses. Bounding boxes with solid and dashed lines respectively represent ground truths (GT) and detections using the proposed method. Boxes are colored as blue (red) if the GT or predicted label is benign (malignant).*
+
 Getting pixel-level annotations for medical images is expensive and time-consuming, especially in breast ultrasound where masses need to be precisely delineated. This creates a bottleneck for training deep learning models. The question is how to train accurate localization and classification models when only a mix of weak labels (image-level) and limited pixel-level annotations are available.
 
 ## Key idea
+
+![Figure description](/images/publications/2019-03-01-joint-weakly-and-semi-supervised-deep-le-fig2.png)
+*Illustration of the proposed framework. (a) Images from two different data streams are forward-propagated into a shared network. (b) The Faster R-CNN [34] used for the “network” of (a). The network is composed of the region proposal network (RPN) and Fast R-CNN [35] with shared convolutional layers. This figure was previously presented in [34] and is reprinted in this paper for the description of the Faster R-CNN. We also note that the proposed method is a general framework; hence, other supervised approaches can also be adopted. (c) An image-level loss is used for images from DX, whereas region-level losses are used for images from DXLoc.*
 
 The framework combines weakly supervised learning (using image-level labels indicating whether a mass is present) with semi-supervised learning (using a small set of fully annotated images) in a unified training pipeline. This joint approach leverages both types of supervision to learn mass localization and classification more effectively than either strategy alone.
 
 ## Why it matters
 
+![Figure description](/images/publications/2019-03-01-joint-weakly-and-semi-supervised-deep-le-fig3.png)
+*Qualitative results on the SNUBH dataset. Each row shows different images. Each of the top three rows presents a case with various types of masses, which can be small, large, or unclear. The bottom two rows present failure cases where either localization or classification fails. Bounding boxes with solid and dashed lines respectively represent ground truths (GT) and detections using the proposed method. Boxes are colored as blue (red) if the GT or predicted label is benign (malignant). Figure best viewed in color.*
+
 Published in IEEE Transactions on Medical Imaging, this work significantly reduces the annotation effort needed for training breast ultrasound CAD systems, making deep learning more practical for clinical deployment in breast cancer screening.
 
-<!-- TODO: Add key figures from the paper -->
-<!-- ![Figure description](/images/publications/2019-03-01-joint-weakly-and-semi-supervised-deep-le-fig1.png) -->

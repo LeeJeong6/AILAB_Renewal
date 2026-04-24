@@ -4,6 +4,7 @@ collection: publications
 date: 2025-11-24
 venue: 'Scientific Reports'
 excerpt: '**Sojung Go**, **Jaemin Chae**, **Uichan Kim**, **Jongsoo Lim**, **Jooyoung Kim**, Sang Jun Park, **Soochahn Lee**'
+thumbnail: '/images/publications/2025-11-24-improving-retinal-vessel-assessment-prec-fig1.png'
 htmlurl: 'https://www.nature.com/articles/s41598-025-25421-6'
 pdfurl: 'https://www.nature.com/articles/s41598-025-25421-6.pdf'
 bibtex: |

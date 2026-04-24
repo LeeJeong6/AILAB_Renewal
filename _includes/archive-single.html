@@ -26,6 +26,16 @@
       </div>
     {% endif %}
 
+    {% if post.collection == 'publications' and post.thumbnail %}
+      <div class="publication-card__body">
+      <div class="publication-card__thumbnail">
+        <a href="{% if post.titleurl %}{{ post.titleurl }}{% else %}{{ base_path }}{{ post.url }}{% endif %}" rel="permalink">
+          <img src="{{ post.thumbnail | prepend: base_path }}" alt="{{ post.title }}">
+        </a>
+      </div>
+      <div class="publication-card__text">
+    {% endif %}
+
     <h2 class="archive__item-title" itemprop="headline">
       {% if post.collection == 'publications' %}
         <a href="{% if post.titleurl %}{{ post.titleurl }}{% else %}{{ base_path }}{{ post.url }}{% endif %}" rel="permalink" class="publication-title-link">{{ title }}</a>
@@ -59,6 +69,9 @@
       <div class="publication-links">
         {% if post.pdfurl %}<a href="{{ post.pdfurl }}"><i class="fa fa-fw fa-file-pdf"></i> PDF</a>{% endif %}
         {% if post.htmlurl %}<a href="{{ post.htmlurl }}"><i class="fa fa-fw fa-globe"></i> Link</a>{% endif %}
+        {% if post.codeurl %}<a href="{{ post.codeurl }}"><i class="fab fa-fw fa-github"></i> Code</a>{% endif %}
+        {% if post.dataseturl %}<a href="{{ post.dataseturl }}">🤗 Dataset</a>{% endif %}
+        {% if post.modelurl %}<a href="{{ post.modelurl }}">🤗 Model</a>{% endif %}
         {% if post.slidesurl %}<a href="{{ post.slidesurl }}"><i class="fa fa-fw fa-file-powerpoint"></i> Slides</a>{% endif %}
         {% if post.bibtexurl %}<a href="{{ post.bibtexurl }}"><i class="fa fa-fw fa-code"></i> Bibtex</a>{% endif %}
         {% if post.bibtex %}
@@ -69,7 +82,7 @@
         {% endif %}
       </div>
       {% if post.bibtex %}
-        <div id="bibtex-{{ post.id | slugify }}" class="bibtex-dropdown" style="display: none; background: var(--global-bg-color, #f4f4f4); border: 1px solid var(--border-color, #ddd); color: var(--global-text-color, #333); padding: 10px; margin-top: 10px; border-radius: 5px; font-family: monospace; font-size: 0.8em; white-space: pre-wrap; overflow-x: auto; text-align: left;">{{ post.bibtex }}</div>
+        <div id="bibtex-{{ post.id | slugify }}" class="bibtex-dropdown" style="display: none; background: var(--global-bg-color, #f4f4f4); border: 1px solid var(--border-color, #ddd); color: var(--global-text-color, #333); padding: 10px; margin-top: 10px; border-radius: 5px; font-family: monospace; font-size: 0.72em; white-space: pre-wrap; overflow-x: auto; text-align: left;">{{ post.bibtex }}</div>
       {% endif %}
       {% if post.citation_mla %}
         <div id="mla-{{ post.id | slugify }}" class="mla-dropdown" style="display: none; background: var(--global-bg-color, #f4f4f4); border: 1px solid var(--border-color, #ddd); color: var(--global-text-color, #333); padding: 10px; margin-top: 10px; border-radius: 5px; font-family: 'Times New Roman', serif; font-size: 0.9em; white-space: pre-wrap; overflow-x: auto; text-align: left;">{{ post.citation_mla }}</div>
@@ -102,6 +115,11 @@
       {% elsif post.bibtexurl %}
         <p><a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
       {% endif %}
+    {% endif %}
+
+    {% if post.collection == 'publications' and post.thumbnail %}
+      </div><!-- .publication-card__text -->
+      </div><!-- .publication-card__body -->
     {% endif %}
 
   </article>

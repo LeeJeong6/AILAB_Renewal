@@ -2,6 +2,21 @@
    ARCHIVE
    ========================================================================== */
 
+/* Remove underlines from news list links on the about page */
+.news-list a {
+  text-decoration: none;
+  color: var(--global-text-color);
+
+  &:hover {
+    text-decoration: none;
+    color: var(--global-link-color-hover);
+  }
+}
+
+.news-list .archive__item:hover .archive__item-title {
+  text-decoration: none;
+}
+
 .archive {
   margin-bottom: 2em;
 
@@ -87,8 +102,81 @@
   }
 }
 
-/* 
-   Publication Visual Highlights & Interactive Cards 
+/*
+   Research Topic Cards
+   ========================================================================== */
+
+a.research-card {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: $border-radius;
+  background-color: var(--global-bg-color);
+  border: 1px solid var(--global-border-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  transition: $global-transition;
+  color: inherit;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow);
+    border-color: var(--global-link-color);
+    text-decoration: none;
+    color: inherit;
+
+    .research-card__title {
+      color: var(--global-link-color-hover);
+    }
+  }
+
+  .research-card__thumbnail {
+    flex-shrink: 0;
+    width: 300px;
+    aspect-ratio: 2 / 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background-color: var(--global-bg-color);
+      border-radius: $border-radius;
+      border: 1px solid var(--global-border-color);
+    }
+
+    @include breakpoint(max-width $small) {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .research-card__text {
+    flex: 1;
+    min-width: 0;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .research-card__title {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: $type-size-5;
+    text-decoration: none;
+    transition: $global-transition;
+  }
+
+  @include breakpoint(max-width $small) {
+    flex-direction: column;
+  }
+}
+
+/*
+   Publication Visual Highlights & Interactive Cards
    ========================================================================== */
 
 .archive__item.publication-card {
@@ -117,6 +205,37 @@
     font-size: $type-size-5;
     transition: $global-transition;
     text-decoration: none;
+  }
+
+  .publication-card__body {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .publication-card__thumbnail {
+    flex-shrink: 0;
+    width: 300px;
+    aspect-ratio: 2 / 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background-color: var(--global-bg-color);
+      border-radius: $border-radius;
+      border: 1px solid var(--global-border-color);
+    }
+
+    @include breakpoint(max-width $small) {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .publication-card__text {
+    flex: 1;
+    min-width: 0;
   }
 
   .publication-title-link {

@@ -2,10 +2,11 @@
 title: "Classification based micro-calcification detection using discriminative restricted Boltzmann machine in digitized mammograms."
 collection: publications
 date: 2014-03-24
-venue: 'Medical Imaging'
+venue: 'SPIE Medical Imaging'
 excerpt: 'Seung Yeon Shin, **Soochahn Lee**, Il Dong Yun'
 pdfurl: 'https://drive.google.com/file/d/1zCIWjPShOQXdi5ZXw3K_zSLa8vSU2d5i/view'
 htmlurl: 'https://www.spiedigitallibrary.org/conference-proceedings-of-spie/9035/90351L/Classification-based-micro-calcification-detection-using-discriminative-restricted-Boltzmann-machine/10.1117/12.2043316.short?SSO=1'
+thumbnail: '/images/publications/2014-03-24-classification-based-micro-calcification-fig2.png'
 bibtex: |
     @inproceedings{Shin_2014, title={Classification based micro-calcification detection using discriminative restricted Boltzmann machine in digitized mammograms}, volume={9035}, ISSN={0277-786X}, url={http://dx.doi.org/10.1117/12.2043316}, DOI={10.1117/12.2043316}, booktitle={Medical Imaging 2014: Computer-Aided Diagnosis}, publisher={SPIE}, author={Shin, SeungYeon and Lee, Soochan and Yun, Il Dong}, editor={Aylward, Stephen and Hadjiiski, Lubomir M.}, year={2014}, month=mar, pages={90351L} }
 citation_mla: |
@@ -22,6 +23,9 @@ citation_mla: |
 
 ## What this paper is about
 
+![Figure description](/images/publications/2014-03-24-classification-based-micro-calcification-fig1.png)
+*1st, 2nd row: Diversified morphologies of micro-calcifications extracted from a single mammogram. 3rd, 4th: False positives (normal patches classified as MC) and false negatives (MC patches classified as normal) selected from our classification results. These patches are difficult to classify because of their ambiguous morphologies.*
+
 Micro-calcifications in mammograms are among the earliest indicators of breast cancer, but they are tiny and easily missed. Automated detection systems need to distinguish these subtle patterns from normal tissue with high sensitivity while keeping false positives low.
 
 ## Key idea
@@ -30,7 +34,8 @@ The paper uses a discriminative restricted Boltzmann machine (RBM) as a classifi
 
 ## Why it matters
 
+![Figure description](/images/publications/2014-03-24-classification-based-micro-calcification-fig2.png)
+*Sample detection results of the proposed method. The pixels with probability of being a MC higher than 50% are represented as red points.*
+
 Improving automated micro-calcification detection helps radiologists catch breast cancer earlier, potentially saving lives through more reliable computer-aided diagnosis in mammography screening programs.
 
-<!-- TODO: Add key figures from the paper -->
-<!-- ![Figure description](/images/publications/classification-based-micro-calcification-fig1.png) -->

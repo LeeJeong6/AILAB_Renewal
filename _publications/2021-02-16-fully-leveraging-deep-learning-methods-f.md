@@ -6,6 +6,8 @@ venue: 'Applied Sciences'
 excerpt: '**Jooyoung Kim**, **Sojung Go**, **Kyoung Jin Noh**, Sang Jun Park, **Soochahn Lee**'
 codeurl: 'https://github.com/snubhretina/Montage'
 htmlurl: 'https://www.mdpi.com/2076-3417/11/4/1754'
+pdfurl: 'https://www.mdpi.com/2076-3417/11/4/1754/pdf?version=1625748859'
+thumbnail: '/images/publications/2021-02-16-fully-leveraging-deep-learning-methods-f-fig1.png' 
 bibtex: |
     @article{Kim_2021, title={Fully Leveraging Deep Learning Methods for Constructing Retinal Fundus Photomontages}, volume={11}, ISSN={2076-3417}, url={http://dx.doi.org/10.3390/app11041754}, DOI={10.3390/app11041754}, number={4}, journal={Applied Sciences}, publisher={MDPI AG}, author={Kim, Jooyoung and Go, Sojung and Noh, Kyoung Jin and Park, Sang Jun and Lee, Soochahn}, year={2021}, month=feb, pages={1754} }
 citation_mla: |
@@ -25,11 +27,15 @@ Retinal fundus cameras capture only a limited field of view, so clinicians often
 
 ## Key idea
 
+![Figure description](/images/publications/2021-02-16-fully-leveraging-deep-learning-methods-f-fig1.png)
+*Overview of the proposed framework for constructing retinal fundus photomontages. Through deep learning based object detection, we are able to apply prior knowledge of the fovea and optic disc to determine the optimal order in which to integrate the images into the montage. Deep learning is also leveraged to reduce errors in registration.*
+
+![Figure description](/images/publications/2021-02-16-fully-leveraging-deep-learning-methods-f-fig2.png)
+*A visual summary of the frame integration pipeline, including a two-step rigid and non-rigid registration method adapted from our MICCAI 2019 paper, together with image blending.*
+
 This work replaces the conventional montage construction pipeline with end-to-end deep learning methods. The approach leverages deep networks for both image registration (aligning overlapping fundus photos) and blending (stitching them into a single coherent mosaic), fully automating the process without manual landmark selection.
 
 ## Why it matters
 
 Automated wide-field montages give ophthalmologists a comprehensive view of the retina in one image, improving diagnostic efficiency for diseases like diabetic retinopathy and retinal detachment -- especially in clinics that lack expensive ultra-widefield cameras.
 
-<!-- TODO: Add key figures from the paper -->
-<!-- ![Figure description](/images/publications/2021-02-16-fully-leveraging-deep-learning-methods-f-fig1.png) -->

@@ -5,6 +5,7 @@ date: 2015-09-24
 venue: 'PLoS ONE'
 excerpt: 'Ho Yub Jung, **Soochahn Lee**, Yong Seok Heo, Il Dong Yun'
 htmlurl: 'https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0138328'
+thumbnail: '/images/publications/2015-09-24-forest-walk-methods-for-localizing-body-fig1.png'
 bibtex: |
     @article{Jung_2015, title={Forest Walk Methods for Localizing Body Joints from Single Depth Image}, volume={10}, ISSN={1932-6203}, url={http://dx.doi.org/10.1371/journal.pone.0138328}, DOI={10.1371/journal.pone.0138328}, number={9}, journal={PLOS ONE}, publisher={Public Library of Science (PLoS)}, author={Jung, Ho Yub and Lee, Soochahn and Heo, Yong Seok and Yun, Il Dong}, editor={Yap, Pew-Thian}, year={2015}, month=sep, pages={e0138328} }
 citation_mla: |
@@ -21,6 +22,9 @@ citation_mla: |
 
 ## What this paper is about
 
+![Figure description](/images/publications/2015-09-24-forest-walk-methods-for-localizing-body-fig1.png)
+*Example results of the RTW from EVAL test data. 64 RTW steps are taken for each joint. The RTW paths are drawn at the top row, the expectations of RTW steps are used to find joint positions in bottom row. The pose estimation from a single image takes less than 1 millisecond.*
+
 Estimating human body joint positions from depth images (like those from Kinect sensors) is fundamental for gesture recognition and human-computer interaction. The challenge is doing this accurately and efficiently from just a single depth frame without temporal information.
 
 ## Key idea
@@ -31,5 +35,3 @@ The paper proposes forest walk methods that go beyond standard random forest cla
 
 This method improves body joint localization accuracy from single depth images, advancing the state of the art for real-time pose estimation applications in gaming, rehabilitation, and interactive systems.
 
-<!-- TODO: Add key figures from the paper -->
-<!-- ![Figure description](/images/publications/forest-walk-methods-for-localizing-body-fig1.png) -->

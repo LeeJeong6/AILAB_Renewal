@@ -5,6 +5,8 @@ date: 2024-02-23
 venue: 'Applied Sciences'
 excerpt: '**Amal Muhammad Saleem**, Sunghee Jung, Hyuk-Jae Chang, **Soochahn Lee**'
 htmlurl: 'https://www.mdpi.com/2076-3417/14/5/1859'
+pdfurl: 'https://www.mdpi.com/2076-3417/14/5/1859/pdf?version=1708934954'
+thumbnail: '/images/publications/2024-02-23-cycle-consistent-generative-motion-artif-fig1.png'
 bibtex: |
     @article{Saleem_2024, title={Cycle Consistent Generative Motion Artifact Correction in Coronary Computed Tomography Angiography}, volume={14}, ISSN={2076-3417}, url={http://dx.doi.org/10.3390/app14051859}, DOI={10.3390/app14051859}, number={5}, journal={Applied Sciences}, publisher={MDPI AG}, author={Saleem, Amal Muhammad and Jung, Sunghee and Chang, Hyuk-Jae and Lee, Soochahn}, year={2024}, month=feb, pages={1859} }
 citation_mla: |
@@ -21,6 +23,10 @@ citation_mla: |
 
 ## What this paper is about
 
+<!-- TODO: Add key figures from the paper -->
+![Figure description](/images/publications/2024-02-23-cycle-consistent-generative-motion-artif-fig1.png)
+*Qualitative examples of the original patch containing the mid-RCA, alongside the results obtained from applying pix2pix and the proposed method, CycleGAN. These samples showcase a range of improvements, with expert evaluations based on a 5-point Likert scale (1 = completely unreadable, 2 = significant motion, 3 = apparent motion, 4 = minor motion, 5 = no motion). Additionally, source information such as case number and phase ϕ in 4D CT is displayed to the left of each sample. (a) represents instances where the scores remained consistent between pix2pix and the proposed method, CycleGAN, while (b) highlights cases where the application of the proposed method, CycleGAN, resulted in improved scores compared to pix2pix.*
+
 Motion artifacts in coronary computed tomography angiography (CCTA) are a persistent problem -- heart motion during scanning creates blurry or distorted images that can make diagnosis unreliable. Getting artifact-free paired training data is extremely difficult in clinical settings, so supervised approaches are limited.
 
 ## Key idea
@@ -31,5 +37,3 @@ The paper uses a cycle-consistent generative adversarial network to learn the ma
 
 This approach can improve the diagnostic quality of coronary CT scans without requiring repeat imaging or paired datasets, potentially reducing patient radiation exposure and improving clinical workflow.
 
-<!-- TODO: Add key figures from the paper -->
-<!-- ![Figure description](/images/publications/2024-02-23-cycle-consistent-generative-motion-artif-fig1.png) -->

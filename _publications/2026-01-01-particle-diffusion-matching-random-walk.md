@@ -4,6 +4,7 @@ collection: publications
 date: 2026-01-01
 venue: 'IEEE Transactions on Image Processing'
 excerpt: 'Kang Geon Lee, **Soochahn Lee**, Kyoung Mu Lee'
+thumbnail: '/images/publications/2026-01-01-particle-diffusion-matching-random-walk-fig2.png'
 htmlurl: 'https://doi.org/10.1109/TIP.2026.3653198'
 bibtex: |
     @article{lee2026particle,

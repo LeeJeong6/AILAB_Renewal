@@ -194,6 +194,7 @@ exclude:
   - vendor
   - venv
   - "*.py"
+  - _publications_excluded
 keep_files:
   - .git
   - .svn

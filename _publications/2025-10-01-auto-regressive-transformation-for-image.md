@@ -4,6 +4,7 @@ collection: publications
 date: 2025-10-01
 venue: 'IEEE/CVF International Conference on Computer Vision (ICCV)'
 excerpt: 'Kanggeon Lee, **Soochahn Lee**, Kyoung Mu Lee'
+thumbnail: '/images/publications/2025-10-01-auto-regressive-transformation-for-image-fig2.png'
 posterurl: 'https://iccv.thecvf.com/media/PosterPDFs/ICCV%202025/28.png?t=1758783578.5315154'
 htmlurl: 'https://openaccess.thecvf.com/content/ICCV2025/html/Lee_Auto-Regressive_Transformation_for_Image_Alignment_ICCV_2025_paper.html'
 pdfurl: 'https://openaccess.thecvf.com/content/ICCV2025/papers/Lee_Auto-Regressive_Transformation_for_Image_Alignment_ICCV_2025_paper.pdf'

@@ -6,6 +6,7 @@ venue: 'European Conference on Computer Vision (ECCV)'
 excerpt: '**Soochahn Lee**, Sehyuk Yoon, Il Dong Yun, Duck Hoon Kim, Kyoung Mu Lee, Sang Uk Lee'
 pdfurl: 'https://drive.google.com/file/d/1oBgTh6NYHkhedJ7yi4ezRi1Cxr5avVuY/view'
 htmlurl: 'https://link.springer.com/article/10.1007/s00371-015-1162-3'
+thumbnail: '/images/publications/2006-01-01-a-new-3-d-model-retrieval-system-based-o-fig2.png'
 bibtex: |
     @inbook{Lee_2006, title={A New 3-D Model Retrieval System Based on Aspect-Transition Descriptor}, ISBN={9783540338390}, ISSN={1611-3349}, url={http://dx.doi.org/10.1007/11744085_42}, DOI={10.1007/11744085_42}, booktitle={Computer Vision – ECCV 2006}, publisher={Springer Berlin Heidelberg}, author={Lee, Soochahn and Yoon, Sehyuk and Yun, Il Dong and Kim, Duck Hoon and Lee, Kyoung Mu and Lee, Sang Uk}, year={2006}, pages={543–554} }
 citation_mla: |
@@ -22,15 +23,21 @@ citation_mla: |
 
 ## What this paper is about
 
+![Figure description](/images/publications/2006-01-01-a-new-3-d-model-retrieval-system-based-o-fig1.png)
+*Describing a 3-D model using its projected images at various viewpoints.*
+
 Searching through large collections of 3D models is tricky because you need a descriptor that captures the essence of a shape regardless of orientation. Existing methods at the time struggled to encode how an object looks from different viewpoints in a compact, discriminative way.
 
 ## Key idea
+
+![Figure description](/images/publications/2006-01-01-a-new-3-d-model-retrieval-system-based-o-fig2.png)
+*Visualization of the view sampling and view classification process. (a) The wireframe is the twice subdivided icosahedron with 320 faces. The bright dots are the centers of each face which represents the viewpoints actually used. The top shapes in (b), (c), and (d) represent the projected images of the model in (a), and the bottom polyhedra represent the distribution of adjacent local variations for each image. Bright faces indicate low local variation, while dark faces indicate high local variation.*
+
+![Figure description](/images/publications/2006-01-01-a-new-3-d-model-retrieval-system-based-o-fig3.png)
+*Characteristic aspects (a, c, e) and characteristic transitions (b, d, f) for an hourglass (a, b) a biplane (c, d), and a dog (e, f).*
 
 The paper introduces the aspect-transition descriptor, which encodes how the visual appearance of a 3D model transitions as the viewpoint changes. This captures richer shape information than single-view descriptors and enables a retrieval system that can match 3D models more accurately.
 
 ## Why it matters
 
 This work was presented at ECCV 2006, one of the top computer vision venues, and contributed a new perspective on 3D shape representation that bridges view-based and geometric approaches to model retrieval.
-
-<!-- TODO: Add key figures from the paper -->
-<!-- ![Figure description](/images/publications/2006-01-01-a-new-3-d-model-retrieval-system-based-o-fig1.png) -->

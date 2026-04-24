@@ -4,6 +4,7 @@ collection: publications
 date: 2025-11-05
 venue: 'arXiv preprint'
 excerpt: 'Jaden Park, Mu Cai, Feng Yao, Jingbo Shang, **Soochahn Lee**, Yong Jae Lee'
+thumbnail: '/images/publications/2025-11-05-contamination-detection-for-vlms-using-fig1.png'
 htmlurl: 'https://arxiv.org/abs/2511.03774'
 pdfurl: 'https://arxiv.org/pdf/2511.03774.pdf'
 bibtex: |

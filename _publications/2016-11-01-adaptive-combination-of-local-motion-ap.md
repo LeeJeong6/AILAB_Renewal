@@ -6,6 +6,7 @@ venue: 'Journal of Imaging Science and Technology'
 excerpt: 'Woo-Sung Shim, Se-Hoon Kim, **Soochahn Lee**'
 pdfurl: 'https://drive.google.com/file/d/1yOcb9LkiPwP1qokY2jd6ecOhdFxgeinF/view'
 htmlurl: 'https://www.ingentaconnect.com/content/ist/jist/2016/00000060/00000006/art00011'
+thumbnail: '/images/publications/2016-11-01-adaptive-combination-of-local-motion-ap-fig1.png'
 bibtex: |
     @article{Shim_2016, title={Adaptive Combination of Local Motion, Appearance, and Shape for Video Segmentation}, volume={60}, ISSN={1943-3522}, url={http://dx.doi.org/10.2352/j.imagingsci.technol.2016.60.6.060409}, DOI={10.2352/j.imagingsci.technol.2016.60.6.060409}, number={6}, journal={Journal of Imaging Science and Technology}, publisher={Society for Imaging Science & Technology}, author={Shim, Woo-sung and Kim, Se-hoon and Lee, Soochahn}, year={2016}, month=nov, pages={060409-1-060409–7} }
 citation_mla: |
@@ -26,11 +27,12 @@ Segmenting objects in video requires handling moving objects, changing appearanc
 
 ## Key idea
 
+![Figure description](/images/publications/2016-11-01-adaptive-combination-of-local-motion-ap-fig1.png)
+*Overview of the proposed method. We combine image gradient based geodesics, color, shape and motion segmentation cues to accurately propagate object and background segment probabilities to adjacent video frames.*
+
 The paper proposes an adaptive combination scheme that dynamically weights local motion, appearance, and shape features for video segmentation. Rather than using fixed weights, the method adjusts how much it relies on each cue based on local context, so it can lean on motion in areas with clear movement and on appearance or shape where motion is ambiguous.
 
 ## Why it matters
 
 This adaptive multi-cue approach produces more robust video segmentation across diverse and challenging scenarios than methods relying on any single cue.
 
-<!-- TODO: Add key figures from the paper -->
-<!-- ![Figure description](/images/publications/adaptive-combination-of-local-motion-ap-fig1.png) -->

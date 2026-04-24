@@ -5,6 +5,7 @@ date: 2019-01-01
 venue: 'IEEE Access'
 excerpt: 'Ho Yub Jung, Yong Seok Heo, **Soochahn Lee**'
 htmlurl: 'https://ieeexplore.ieee.org/document/8809706'
+thumbnail: '/images/publications/2019-01-01-fingerprint-liveness-detection-by-a-temp-fig2.png'
 bibtex: |
     @article{Jung_2019, title={Fingerprint Liveness Detection by a Template-Probe Convolutional Neural Network}, volume={7}, ISSN={2169-3536}, url={http://dx.doi.org/10.1109/access.2019.2936890}, DOI={10.1109/access.2019.2936890}, journal={IEEE Access}, publisher={Institute of Electrical and Electronics Engineers (IEEE)}, author={Jung, Ho Yub and Heo, Yong Seok and Lee, Soochahn}, year={2019}, pages={118986–118993} }
 citation_mla: |
@@ -21,9 +22,15 @@ citation_mla: |
 
 ## What this paper is about
 
+![Figure description](/images/publications/2019-01-01-fingerprint-liveness-detection-by-a-temp-fig1.png)
+*The left fingerprint is a live press fingerprint, whereas the right fingerprint is obtained by pressing a synthetic finger made out of wood-glue. The two fingerprints came from the same finger and so have matching identification. We aim to detect the liveness of the fingerprint press using a convolutional neural network.*
+
 Fingerprint-based authentication systems are vulnerable to spoofing attacks using fake fingerprints made from materials like silicone or gelatin. Liveness detection -- telling apart real fingers from fakes -- is critical for securing these systems. Existing approaches often analyze a single fingerprint image in isolation.
 
 ## Key idea
+
+![Figure description](/images/publications/2019-01-01-fingerprint-liveness-detection-by-a-temp-fig2.png)
+*Visual description of the overall process of the proposed approach.*
 
 Instead of looking at a single fingerprint, this method uses a template-probe CNN architecture that jointly analyzes both a stored template fingerprint and the newly captured probe fingerprint. By learning the relationship between the two, the network can better detect subtle differences that indicate whether the probe comes from a live finger or an artificial replica.
 
@@ -31,5 +38,3 @@ Instead of looking at a single fingerprint, this method uses a template-probe CN
 
 This pairwise comparison approach provides a more robust liveness detection mechanism, making fingerprint authentication systems harder to fool with spoofed prints.
 
-<!-- TODO: Add key figures from the paper -->
-<!-- ![Figure description](/images/publications/2019-01-01-fingerprint-liveness-detection-by-a-temp-fig1.png) -->

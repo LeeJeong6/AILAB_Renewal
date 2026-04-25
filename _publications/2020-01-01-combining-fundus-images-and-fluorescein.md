@@ -7,6 +7,7 @@ excerpt: '**Kyoung Jin Noh**, Sang Jun Park, **Soochahn Lee**'
 pdfurl: 'https://drive.google.com/file/d/1xfOCi8XjrxANGJ73WeDGJ4RASExgBL-z/view'
 htmlurl: 'https://link.springer.com/chapter/10.1007/978-3-030-59722-1_57'
 thumbnail: '/images/publications/2020-01-01-combining-fundus-images-and-fluorescein-fig1.png'
+codeurl: 'https://github.com/snubhretina/HVGN'
 bibtex: |
     @inbook{Noh_2020, title={Combining Fundus Images and Fluorescein Angiography for Artery/Vein Classification Using the Hierarchical Vessel Graph Network}, ISBN={9783030597221}, ISSN={1611-3349}, url={http://dx.doi.org/10.1007/978-3-030-59722-1_57}, DOI={10.1007/978-3-030-59722-1_57}, booktitle={Medical Image Computing and Computer Assisted Intervention – MICCAI 2020}, publisher={Springer International Publishing}, author={Noh, Kyoung Jin and Park, Sang Jun and Lee, Soochahn}, year={2020}, pages={595–605} }
 citation_mla: |

@@ -7,6 +7,7 @@ excerpt: '**Kyoung Jin Noh**, Sang Jun Park, **Soochahn Lee**'
 pdfurl: 'https://drive.google.com/file/d/1meVkyNyYhTCGwP8DnUo5VV_btDrbom7l/view'
 htmlurl: 'https://link.springer.com/chapter/10.1007/978-3-030-32239-7_86'
 thumbnail: '/images/publications/2019-01-01-fine-scale-vessel-extraction-in-fundus-i-fig2.png'
+codeurl: 'https://github.com/snubhretina/Registration_FP_FAG'
 bibtex: |
     @inbook{Noh_2019, title={Fine-Scale Vessel Extraction in Fundus Images by Registration with Fluorescein Angiography}, ISBN={9783030322397}, ISSN={1611-3349}, url={http://dx.doi.org/10.1007/978-3-030-32239-7_86}, DOI={10.1007/978-3-030-32239-7_86}, booktitle={Medical Image Computing and Computer Assisted Intervention – MICCAI 2019}, publisher={Springer International Publishing}, author={Noh, Kyoung Jin and Park, Sang Jun and Lee, Soochahn}, year={2019}, pages={779–787} }
 citation_mla: |

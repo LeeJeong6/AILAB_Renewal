@@ -8,10 +8,15 @@
    our click listener is registered BEFORE the deferred main.min.js loads
    greedy-nav. On mobile we call stopImmediatePropagation() to keep
    greedy-nav's handler from also firing; on desktop we do nothing and
-   let greedy-nav handle the click. */
+   let greedy-nav handle the click.
+
+   IMPORTANT: do not use // line comments inside this block. Jekyll's
+   compress layout strips newlines, which would turn any // comment into
+   a comment that swallows the rest of the script. Use /* ... *_/ only.
+   (the underscore in *_/ here is just to keep this comment intact.) */
 (function () {
   /* Matches @include breakpoint(max-width $small) in _sass/_themes.scss
-     ($small = 600px, converted to ems → 37.5em). */
+     ($small = 600px, converted to ems = 37.5em). */
   var MOBILE_MQ = '(max-width: 37.5em)';
   function isMobile() {
     return window.matchMedia && window.matchMedia(MOBILE_MQ).matches;
@@ -25,16 +30,13 @@
     var willOpen = drop.classList.contains('hidden');
     drop.classList.toggle('hidden', !willOpen);
     btn.classList.toggle('close', willOpen);
-  }, true); // capture phase so we run before greedy-nav's bubble-phase handler
-  // Close the dropdown when a link inside it is followed.
+  }, true);
   drop.addEventListener('click', function (e) {
     if (e.target && e.target.tagName === 'A') {
       drop.classList.add('hidden');
       btn.classList.remove('close');
     }
   });
-  // If the viewport grows past the mobile breakpoint while the dropdown
-  // is open, hide it so it doesn't linger on desktop layout.
   window.addEventListener('resize', function () {
     if (!isMobile()) {
       drop.classList.add('hidden');

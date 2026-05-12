@@ -1,46 +1,46 @@
 <script type="module" src="{{ base_path }}/assets/js/main.min.js"></script>
 
 <script>
-/* On mobile portrait (≤ 600px), force all non-persist nav items into the
-   hamburger dropdown. On wider viewports, restore them to the visible
-   menu and let greedy-nav handle any overflow normally. */
+/* Mobile portrait (≤ 600px): the hamburger button toggles a separate,
+   server-rendered .mobile-links dropdown. This inline script runs while
+   the body is being parsed (the masthead is already in the DOM by this
+   point because scripts.html is included after the page content), so
+   our click listener is registered BEFORE the deferred main.min.js loads
+   greedy-nav. On mobile we call stopImmediatePropagation() to keep
+   greedy-nav's handler from also firing; on desktop we do nothing and
+   let greedy-nav handle the click. */
 (function () {
-  var MOBILE_MAX = 600;
-  function syncMobileNav() {
-    var $nav = window.jQuery && jQuery('#site-nav');
-    if (!$nav || !$nav.length) return;
-    var $vlinks = $nav.find('.visible-links');
-    var $hlinks = $nav.find('.hidden-links');
-    var $btn = $nav.find('button');
-    var isMobile = window.matchMedia('(max-width: ' + MOBILE_MAX + 'px)').matches;
-    if (isMobile) {
-      var $movers = $vlinks.children(':not(.persist)');
-      if ($movers.length) $movers.prependTo($hlinks);
-      $btn.removeClass('hidden');
-    } else {
-      var $tail = $vlinks.children('.persist.tail');
-      var $hidden = $hlinks.children();
-      if ($hidden.length) {
-        if ($tail.length) $hidden.insertBefore($tail);
-        else $hidden.appendTo($vlinks);
-        $btn.addClass('hidden');
-        $hlinks.addClass('hidden');
-      }
+  /* Matches @include breakpoint(max-width $small) in _sass/_themes.scss
+     ($small = 600px, converted to ems → 37.5em). */
+  var MOBILE_MQ = '(max-width: 37.5em)';
+  function isMobile() {
+    return window.matchMedia && window.matchMedia(MOBILE_MQ).matches;
+  }
+  var btn = document.querySelector('#site-nav button');
+  var drop = document.querySelector('#site-nav .mobile-links');
+  if (!btn || !drop) return;
+  btn.addEventListener('click', function (e) {
+    if (!isMobile()) return;
+    e.stopImmediatePropagation();
+    var willOpen = drop.classList.contains('hidden');
+    drop.classList.toggle('hidden', !willOpen);
+    btn.classList.toggle('close', willOpen);
+  }, true); // capture phase so we run before greedy-nav's bubble-phase handler
+  // Close the dropdown when a link inside it is followed.
+  drop.addEventListener('click', function (e) {
+    if (e.target && e.target.tagName === 'A') {
+      drop.classList.add('hidden');
+      btn.classList.remove('close');
     }
-  }
-  function init() {
-    syncMobileNav();
-    jQuery(window).on('resize orientationchange', syncMobileNav);
-  }
-  if (window.jQuery) {
-    jQuery(init);
-  } else {
-    var tries = 0;
-    var iv = setInterval(function () {
-      if (window.jQuery) { clearInterval(iv); jQuery(init); }
-      else if (++tries > 50) clearInterval(iv);
-    }, 100);
-  }
+  });
+  // If the viewport grows past the mobile breakpoint while the dropdown
+  // is open, hide it so it doesn't linger on desktop layout.
+  window.addEventListener('resize', function () {
+    if (!isMobile()) {
+      drop.classList.add('hidden');
+      btn.classList.remove('close');
+    }
+  });
 })();
 </script>
 

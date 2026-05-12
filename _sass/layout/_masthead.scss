@@ -83,8 +83,16 @@
   /* No need to repeat pointer-events and cursor here */
 }
 
-/* Mobile portrait: tighten spacing so menu items fit, and let the
-   greedy-nav collapse overflow into the hamburger dropdown. */
+/* The server-rendered mobile dropdown is only shown on small viewports. */
+.mobile-links {
+  display: none;
+}
+
+/* Mobile portrait: collapse the menu to logo + theme toggle + hamburger,
+   and show a server-rendered dropdown when the hamburger is tapped. The
+   dropdown is driven purely by CSS (toggling the .hidden class via a
+   small inline click handler), so it does not depend on greedy-nav's
+   runtime overflow measurements. */
 @include breakpoint(max-width $small) {
   .masthead__inner-wrap {
     padding: 0.4em 0.6em;
@@ -94,33 +102,94 @@
     padding-right: 0.5em;
   }
 
+  /* The hamburger is always visible on mobile, even if greedy-nav's
+     script tries to hide it. */
+  .greedy-nav > button {
+    display: block !important;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* greedy-nav's hidden-links dropdown is unused on mobile — we use the
+     dedicated .mobile-links UL instead. */
+  .greedy-nav .hidden-links {
+    display: none !important;
+  }
+
+  /* Top row: only persistent items (logo + theme toggle). Non-persistent
+     items move into the mobile dropdown below. */
+  .greedy-nav .visible-links {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding-right: 2.5rem; /* reserve room for the hamburger button */
+  }
+
+  .greedy-nav .visible-links > li {
+    display: flex;
+    align-items: center;
+  }
+
+  .greedy-nav .visible-links > li:not(.persist) {
+    display: none;
+  }
+
+  .greedy-nav .visible-links > li.persist.tail {
+    margin-left: auto;
+    margin-right: 0.25rem;
+  }
+
   .greedy-nav a {
     margin: 0 0.35rem;
     font-size: 0.85em;
   }
 
-  /* Lay out the persistent items (logo + theme toggle) with flex so the
-     theme toggle can sit right next to the hamburger button on the right. */
-  .greedy-nav .visible-links {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    padding-right: 2.25rem; /* reserve room for the hamburger button */
+  /* Mobile dropdown: shown only when the hamburger toggles off .hidden. */
+  .mobile-links {
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    margin: 0;
+    padding: 0.25rem 0;
+    list-style: none;
+    background: var(--global-bg-color);
+    border-top: 1px solid var(--global-border-color);
+    border-bottom: 1px solid var(--global-border-color);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    z-index: 19; /* below masthead's z-index of 20 but above content */
   }
 
-  .greedy-nav .visible-links li {
-    display: flex;
-    align-items: center;
+  .mobile-links.hidden {
+    display: none;
   }
 
-  .greedy-nav .visible-links li.persist.tail {
-    margin-left: auto; /* push the theme toggle to the right edge */
-    margin-right: 0.25rem; /* small gap before the hamburger */
+  .mobile-links > li {
+    display: block;
+    border-bottom: 1px solid var(--global-border-color);
   }
 
-  /* Vertically center the hamburger button in the masthead row. */
-  .greedy-nav > button {
-    top: 50%;
-    transform: translateY(-50%);
+  .mobile-links > li:last-child {
+    border-bottom: none;
+  }
+
+  .mobile-links a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: var(--global-masthead-link-color);
+    text-decoration: none;
+    font-family: $sans-serif-narrow;
+    font-size: 1rem;
+  }
+
+  .mobile-links a:hover {
+    color: var(--global-masthead-link-color-hover);
+    background: var(--global-border-color);
+  }
+
+  .mobile-links .selected a {
+    color: var(--global-text-color);
+    font-weight: 700;
   }
 }

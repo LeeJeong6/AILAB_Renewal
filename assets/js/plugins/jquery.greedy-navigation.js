@@ -74,9 +74,18 @@ function updateNav() {
 $(window).on('resize', function () {
   updateNav();
 });
-screen.orientation.addEventListener("change", function () {
-  updateNav();
-});
+
+// screen.orientation isn't available on every mobile browser (e.g. Safari
+// prior to 16.4) — guard the addEventListener call so the rest of this
+// script (and everything bundled after it in main.min.js) still runs.
+if (typeof screen !== 'undefined' && screen.orientation &&
+    typeof screen.orientation.addEventListener === 'function') {
+  try {
+    screen.orientation.addEventListener("change", function () {
+      updateNav();
+    });
+  } catch (e) { /* no-op */ }
+}
 
 $btn.on('click', function () {
   $hlinks.toggleClass('hidden');

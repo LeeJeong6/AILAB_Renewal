@@ -43,6 +43,36 @@
       btn.classList.remove('close');
     }
   });
+
+  /* Theme toggle: bound here (vanilla JS) rather than relying on the
+     jQuery handler in _main.js, because some mobile browsers were not
+     firing the bubbled click reliably. We stopImmediatePropagation so
+     the jQuery handler doesn't also fire and double-toggle the theme. */
+  var themeAnchor = document.querySelector('#theme-toggle a');
+  var themeIcon = document.getElementById('theme-icon');
+  if (themeAnchor) {
+    themeAnchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      var html = document.documentElement;
+      var current = html.getAttribute('data-theme');
+      var next = current === 'dark' ? 'light' : 'dark';
+      try { localStorage.setItem('theme', next); } catch (_) {}
+      if (next === 'dark') {
+        html.setAttribute('data-theme', 'dark');
+        if (themeIcon) {
+          themeIcon.classList.remove('fa-sun');
+          themeIcon.classList.add('fa-moon');
+        }
+      } else {
+        html.removeAttribute('data-theme');
+        if (themeIcon) {
+          themeIcon.classList.remove('fa-moon');
+          themeIcon.classList.add('fa-sun');
+        }
+      }
+    });
+  }
 })();
 </script>
 

@@ -1,3 +1,47 @@
 <script type="module" src="{{ base_path }}/assets/js/main.min.js"></script>
 
+<script>
+/* On mobile portrait (≤ 600px), force all non-persist nav items into the
+   hamburger dropdown. On wider viewports, restore them to the visible
+   menu and let greedy-nav handle any overflow normally. */
+(function () {
+  var MOBILE_MAX = 600;
+  function syncMobileNav() {
+    var $nav = window.jQuery && jQuery('#site-nav');
+    if (!$nav || !$nav.length) return;
+    var $vlinks = $nav.find('.visible-links');
+    var $hlinks = $nav.find('.hidden-links');
+    var $btn = $nav.find('button');
+    var isMobile = window.matchMedia('(max-width: ' + MOBILE_MAX + 'px)').matches;
+    if (isMobile) {
+      var $movers = $vlinks.children(':not(.persist)');
+      if ($movers.length) $movers.prependTo($hlinks);
+      $btn.removeClass('hidden');
+    } else {
+      var $tail = $vlinks.children('.persist.tail');
+      var $hidden = $hlinks.children();
+      if ($hidden.length) {
+        if ($tail.length) $hidden.insertBefore($tail);
+        else $hidden.appendTo($vlinks);
+        $btn.addClass('hidden');
+        $hlinks.addClass('hidden');
+      }
+    }
+  }
+  function init() {
+    syncMobileNav();
+    jQuery(window).on('resize orientationchange', syncMobileNav);
+  }
+  if (window.jQuery) {
+    jQuery(init);
+  } else {
+    var tries = 0;
+    var iv = setInterval(function () {
+      if (window.jQuery) { clearInterval(iv); jQuery(init); }
+      else if (++tries > 50) clearInterval(iv);
+    }, 100);
+  }
+})();
+</script>
+
 {% include analytics.html %}

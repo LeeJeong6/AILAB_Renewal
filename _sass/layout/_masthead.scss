@@ -82,3 +82,45 @@
   border-bottom: 2px solid var(--global-text-color);
   /* No need to repeat pointer-events and cursor here */
 }
+
+/* Mobile portrait: tighten spacing so menu items fit, and let the
+   greedy-nav collapse overflow into the hamburger dropdown. */
+@include breakpoint(max-width $small) {
+  .masthead__inner-wrap {
+    padding: 0.4em 0.6em;
+  }
+
+  .masthead__menu-item--lg {
+    padding-right: 0.5em;
+  }
+
+  .greedy-nav a {
+    margin: 0 0.35rem;
+    font-size: 0.85em;
+  }
+
+  /* Lay out the persistent items (logo + theme toggle) with flex so the
+     theme toggle can sit right next to the hamburger button on the right. */
+  .greedy-nav .visible-links {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding-right: 2.25rem; /* reserve room for the hamburger button */
+  }
+
+  .greedy-nav .visible-links li {
+    display: flex;
+    align-items: center;
+  }
+
+  .greedy-nav .visible-links li.persist.tail {
+    margin-left: auto; /* push the theme toggle to the right edge */
+    margin-right: 0.25rem; /* small gap before the hamburger */
+  }
+
+  /* Vertically center the hamburger button in the masthead row. */
+  .greedy-nav > button {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

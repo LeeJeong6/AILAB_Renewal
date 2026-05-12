@@ -50,7 +50,16 @@
      the jQuery handler doesn't also fire and double-toggle the theme. */
   var themeAnchor = document.querySelector('#theme-toggle a');
   var themeIcon = document.getElementById('theme-icon');
-  /* Sync the icon with the theme that head.html already applied. */
+  /* Fallback: if head.html didn't apply data-theme yet (e.g. a stale
+     cached page from before that script was added), restore it now
+     from localStorage. Also sync the icon. */
+  try {
+    var savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark' &&
+        document.documentElement.getAttribute('data-theme') !== 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  } catch (_) {}
   if (themeIcon && document.documentElement.getAttribute('data-theme') === 'dark') {
     themeIcon.classList.remove('fa-sun');
     themeIcon.classList.add('fa-moon');

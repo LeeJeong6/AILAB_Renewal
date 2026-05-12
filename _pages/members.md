@@ -97,22 +97,22 @@ author_profile: false
   <div class="member-card">
     <img src="/images/members/member_04.jpg" class="member-photo" alt="정승은 SeungEun Chung">
     <div class="member-name">정승은<br>SeungEun Chung</div>
-    <div class="member-title">M.S.</div>
+    <div class="member-title">M.S.<br>FPT Software</div>
   </div>
   <div class="member-card">
     <img src="/images/members/member_07.jpeg" class="member-photo" alt="맹주완 Juwan Maeng">
     <div class="member-name">맹주완<br>Juwan Maeng</div>
-    <div class="member-title">M.S.</div>
+    <div class="member-title">M.S.<br>LIG Nex1</div>
   </div>
   <div class="member-card">
     <img src="/images/members/member_08.jpg" class="member-photo" alt="이건 Gun Lee">
     <div class="member-name">이건<br>Gun Lee</div>
-    <div class="member-title">M.S.</div>
+    <div class="member-title">M.S.<br>(주)페이크아이즈</div>
   </div>
   <div class="member-card">
     <img src="/images/members/member_09.jpeg" class="member-photo" alt="채재민 JaeMin Chae">
     <div class="member-name">채재민<br>JaeMin Chae</div>
-    <div class="member-title">M.S.<br>SNUBH</div>
+    <div class="member-title">M.S.<br>CLOP Inc.</div>
   </div>
   <div class="member-card">
     <img src="/images/members/member_10.jpg" class="member-photo" alt="고소정 Sojeong Go">
@@ -122,7 +122,7 @@ author_profile: false
   <div class="member-card">
     <img src="/images/members/member_11.jpg" class="member-photo" alt="김의찬 UiChan Kim">
     <div class="member-name">김의찬<br>UiChan Kim</div>
-    <div class="member-title">M.S.</div>
+    <div class="member-title">M.S.<br>Entrepreneur</div>
   </div>
   <div class="member-card">
     <img src="/images/members/member_12.jpeg" class="member-photo" alt="임정선 Jungsun Im">
@@ -132,7 +132,7 @@ author_profile: false
   <div class="member-card">
     <img src="/images/members/member_13.jpg" class="member-photo" alt="이종진 Jongjin Lee">
     <div class="member-name">이종진<br>Jongjin Lee</div>
-    <div class="member-title">M.S.</div>
+    <div class="member-title">M.S.<br>SNUAILAB Co.</div>
   </div>
   <div class="member-card">
     <img src="/images/members/member_14.jpg" class="member-photo" alt="이다슬 Daseul Lee">
@@ -142,7 +142,7 @@ author_profile: false
   <div class="member-card">
     <img src="/images/members/member_15.jpg" class="member-photo" alt="아말 Amal Saleem">
     <div class="member-name">아말<br>Amal Saleem</div>
-    <div class="member-title">M.S.</div>
+    <div class="member-title">M.S.<br>HealthHub Co.</div>
   </div>
   <div class="member-card">
     <img src="/images/members/member_16.jpeg" class="member-photo" alt="전효기 Hyogi Jeon">
@@ -152,7 +152,7 @@ author_profile: false
   <div class="member-card">
     <img src="/images/members/member_17.jpg" class="member-photo" alt="정철희 Jeongcheol Jeong">
     <div class="member-name">정철희<br>Jeongcheol Jeong</div>
-    <div class="member-title">M.S.</div>
+    <div class="member-title">M.S.<br>Suprema Inc.</div>
   </div>
   <div class="member-card">
     <img src="/images/members/member_18.jpg" class="member-photo" alt="노경진 Kyungjin Noh">
@@ -162,7 +162,7 @@ author_profile: false
   <div class="member-card">
     <img src="/images/members/member_19.jpg" class="member-photo" alt="임종수 JongSu Im">
     <div class="member-name">임종수<br>JongSu Im</div>
-    <div class="member-title">M.S.</div>
+    <div class="member-title">M.S.<br>AMC MI2RL</div>
   </div>
   <div class="member-card">
     <img src="/images/members/member_20.jpeg" class="member-photo" alt="지영훈 Younghoon Ji">
@@ -172,7 +172,7 @@ author_profile: false
   <div class="member-card">
     <img src="/images/members/member_21.jpg" class="member-photo" alt="김주영 Jooyoung Kim">
     <div class="member-name">김주영<br>Jooyoung Kim</div>
-    <div class="member-title">M.S.<br>SNUBH</div>
+    <div class="member-title">M.S.<br>Experix Inc.</div>
   </div>
 </div>
 

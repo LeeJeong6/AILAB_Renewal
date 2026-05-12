@@ -50,6 +50,11 @@
      the jQuery handler doesn't also fire and double-toggle the theme. */
   var themeAnchor = document.querySelector('#theme-toggle a');
   var themeIcon = document.getElementById('theme-icon');
+  /* Sync the icon with the theme that head.html already applied. */
+  if (themeIcon && document.documentElement.getAttribute('data-theme') === 'dark') {
+    themeIcon.classList.remove('fa-sun');
+    themeIcon.classList.add('fa-moon');
+  }
   if (themeAnchor) {
     themeAnchor.addEventListener('click', function (e) {
       e.preventDefault();

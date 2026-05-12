@@ -10,6 +10,14 @@
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  /* Restore the user's saved theme before the body renders, so the page
+     paints in the correct theme on every navigation. */
+  try {
+    var savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  } catch (e) { /* localStorage unavailable */ }
 </script>
 
 <!-- For all browsers -->

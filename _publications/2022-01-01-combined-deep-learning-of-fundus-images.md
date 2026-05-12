@@ -5,6 +5,7 @@ date: 2022-01-01
 venue: 'IEEE Access'
 excerpt: '**Sojung Go**, **Jooyoung Kim**, **Kyoung Jin Noh**, Sang Jun Park, **Soochahn Lee**'
 htmlurl: 'https://ieeexplore.ieee.org/abstract/document/9810952'
+codeurl: 'https://github.com/snubhretina/Dual-HVGN'
 thumbnail: '/images/publications/2022-01-01-combined-deep-learning-of-fundus-images-fig1.png'
 bibtex: |
     @article{Go_2022, title={Combined Deep Learning of Fundus Images and Fluorescein Angiography for Retinal Artery/Vein Classification}, volume={10}, ISSN={2169-3536}, url={http://dx.doi.org/10.1109/access.2022.3187503}, DOI={10.1109/access.2022.3187503}, journal={IEEE Access}, publisher={Institute of Electrical and Electronics Engineers (IEEE)}, author={Go, Sojung and Kim, Jooyoung and Noh, Kyoung Jin and Park, Sang Jun and Lee, Soochahn}, year={2022}, pages={70688–70698} }

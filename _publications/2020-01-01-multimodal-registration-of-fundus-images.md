@@ -6,6 +6,7 @@ venue: 'IEEE Access'
 excerpt: '**Kyoung Jin Noh**, **Jooyoung Kim**, Sang Jun Park, **Soochahn Lee**'
 htmlurl: 'https://ieeexplore.ieee.org/abstract/document/9050794'
 thumbnail: '/images/publications/2020-01-01-multimodal-registration-of-fundus-images-fig1.png'
+codeurl: 'https://github.com/snubhretina/Registration_FP_FAG'
 bibtex: |
     @article{Noh_2020, title={Multimodal Registration of Fundus Images With Fluorescein Angiography for Fine-Scale Vessel Segmentation}, volume={8}, ISSN={2169-3536}, url={http://dx.doi.org/10.1109/access.2020.2984372}, DOI={10.1109/access.2020.2984372}, journal={IEEE Access}, publisher={Institute of Electrical and Electronics Engineers (IEEE)}, author={Noh, Kyoung Jin and Kim, Jooyoung and Park, Sang Jun and Lee, Soochahn}, year={2020}, pages={63757–63769} }
 citation_mla: |

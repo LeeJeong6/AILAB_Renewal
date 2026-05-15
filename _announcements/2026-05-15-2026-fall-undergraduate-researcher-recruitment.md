@@ -6,7 +6,7 @@ thumbnail: /images/announcements/2026-undergraduate-researcher-recruitment.jpg
 ---
 
 <div class="notice notice--info" style="margin: 0 0 1.5rem; padding: 1rem 1.25rem; text-align: center;">
-  <a href="https://ee.kookmin.ac.kr/community/board/notice/" class="btn btn--primary" style="font-size: 1.15rem; padding: 0.85rem 1.4rem;">
+  <a href="https://ee.kookmin.ac.kr/community/board/notice/2549" class="btn btn--primary" style="font-size: 1.15rem; padding: 0.85rem 1.4rem;">
     전자공학부 공지사항 바로가기
   </a>
 </div>

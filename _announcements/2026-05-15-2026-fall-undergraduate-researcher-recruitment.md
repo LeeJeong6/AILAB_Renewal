@@ -9,7 +9,7 @@ Kookmin AILab에서 2026년 하반기 학부연구생을 모집합니다.
 
 우리 연구실은 인공지능, 컴퓨터비전, 의료영상 분석, 멀티모달 학습, 생성 모델 분야를 중심으로 실제 문제를 해결하는 연구를 수행하고 있습니다. 연구에 관심이 있고 꾸준히 배우며 프로젝트에 참여하고 싶은 학생들의 지원을 기다립니다.
 
-![2026년 하반기 학부연구생 모집 포스터](/images/announcements/2026-undergraduate-researcher-recruitment.jpg)
+<img src="{{ '/images/announcements/2026-undergraduate-researcher-recruitment.jpg' | relative_url }}" alt="2026년 하반기 학부연구생 모집 포스터">
 
 ## 모집 대상
 

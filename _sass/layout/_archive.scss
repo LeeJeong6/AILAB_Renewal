@@ -175,6 +175,14 @@ a.research-card {
   }
 }
 
+a.announcement-card {
+  .announcement-card__date {
+    margin-bottom: 0.25rem;
+    color: var(--global-text-color-light);
+    font-size: $type-size-6;
+  }
+}
+
 /*
    Publication Visual Highlights & Interactive Cards
    ========================================================================== */

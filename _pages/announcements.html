@@ -1,0 +1,23 @@
+---
+layout: single
+title: "Announcement"
+permalink: /announcements/
+author_profile: false
+---
+
+Lab notices and internal announcements are listed below. Select an announcement to view the full post.
+
+<div class="research-cards" markdown="0">
+{% assign announcements = site.announcements | sort: "date" | reverse %}
+{% for announcement in announcements %}
+<a href="{{ announcement.url | relative_url }}" class="research-card announcement-card">
+  <div class="research-card__text">
+    <p class="announcement-card__date">{{ announcement.date | date: "%B %d, %Y" }}</p>
+    <h2 class="research-card__title">{{ announcement.title }}</h2>
+    {% if announcement.excerpt %}
+    <p>{{ announcement.excerpt | markdownify | strip_html | truncate: 220 }}</p>
+    {% endif %}
+  </div>
+</a>
+{% endfor %}
+</div>

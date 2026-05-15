@@ -16,6 +16,9 @@ main:
     
   - title: "Research"
     url: /research/
+
+  - title: "Announcement"
+    url: /announcements/
         
   - title: "News"
     url: /news/

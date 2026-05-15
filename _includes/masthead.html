@@ -10,9 +10,9 @@
           </li>
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
-              {% assign domain = '' %}
+              {% assign nav_url = link.url %}
             {% else %}
-              {% assign domain = base_path %}
+              {% assign nav_url = link.url | relative_url %}
             {% endif %}
             {% assign is_selected = false %}
             {% assign is_exact = false %}
@@ -25,7 +25,7 @@
               {% assign is_selected = true %}
             {% endif %}
             <li class="masthead__menu-item {% if is_selected %}selected{% endif %} {% if is_exact %}exact{% endif %}">
-              <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
+              <a href="{{ nav_url }}">{{ link.title }}</a>
             </li>
           {% endfor %}
           <li id="theme-toggle" class="masthead__menu-item persist tail">
@@ -36,9 +36,9 @@
         <ul class="mobile-links hidden" aria-hidden="true">
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
-              {% assign m_domain = '' %}
+              {% assign m_nav_url = link.url %}
             {% else %}
-              {% assign m_domain = base_path %}
+              {% assign m_nav_url = link.url | relative_url %}
             {% endif %}
             {% assign m_is_selected = false %}
             {% if page.url == link.url %}
@@ -49,7 +49,7 @@
               {% assign m_is_selected = true %}
             {% endif %}
             <li class="masthead__menu-item {% if m_is_selected %}selected{% endif %}">
-              <a href="{{ m_domain }}{{ link.url }}">{{ link.title }}</a>
+              <a href="{{ m_nav_url }}">{{ link.title }}</a>
             </li>
           {% endfor %}
         </ul>

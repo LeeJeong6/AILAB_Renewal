@@ -1,0 +1,14 @@
+{% assign content_html = include.content %}
+
+{% if site.baseurl and site.baseurl != "" %}
+  {% assign href_root = 'href="/' %}
+  {% assign href_base = 'href="' | append: site.baseurl | append: '/' %}
+  {% assign src_root = 'src="/' %}
+  {% assign src_base = 'src="' | append: site.baseurl | append: '/' %}
+  {% assign href_duplicate = 'href="' | append: site.baseurl | append: site.baseurl | append: '/' %}
+  {% assign src_duplicate = 'src="' | append: site.baseurl | append: site.baseurl | append: '/' %}
+
+  {{ content_html | replace: href_root, href_base | replace: src_root, src_base | replace: href_duplicate, href_base | replace: src_duplicate, src_base }}
+{% else %}
+  {{ content_html }}
+{% endif %}

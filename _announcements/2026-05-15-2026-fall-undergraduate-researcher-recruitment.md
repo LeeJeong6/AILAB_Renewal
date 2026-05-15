@@ -1,7 +1,7 @@
 ---
 title: "2026년 하반기 학부연구생 모집"
 date: 2026-05-15
-excerpt: "Kookmin AILab에서 인공지능, 컴퓨터비전, 의료영상 분석 연구에 함께 참여할 학부연구생을 모집합니다."
+excerpt: "전자공학부 인공지능연구실에서 인공지능, 컴퓨터비전, 의료영상 분석 연구에 함께 참여할 학부연구생을 모집합니다."
 thumbnail: /images/announcements/2026-undergraduate-researcher-recruitment.jpg
 ---
 

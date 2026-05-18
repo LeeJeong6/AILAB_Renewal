@@ -235,10 +235,6 @@ collections:
     output: true
     permalink: /:collection/:path/
     sort_by: date
-  announcements:
-    output: true
-    permalink: /:collection/:path/
-    sort_by: date
   portfolio:
     output: true
     permalink: /:collection/:path/
@@ -285,15 +281,6 @@ defaults:
       author_profile: false
       share: false
       comments: true
-  # _announcements
-  - scope:
-      path: ""
-      type: announcements
-    values:
-      layout: single
-      author_profile: false
-      share: false
-      comments: false
   # _portfolio
   - scope:
       path: ""

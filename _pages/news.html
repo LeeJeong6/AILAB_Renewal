@@ -15,13 +15,5 @@ redirect_from:
     <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
     {% capture written_year %}{{ year }}{% endcapture %}
   {% endif %}
-  <div class="list__item">
-    <article class="archive__item">
-      <h2 class="archive__item-title">{{ post.title }}</h2>
-      <p class="page__date"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ post.date | date: "%B %d, %Y" }}</p>
-      <div class="archive__item-content">
-        {{ post.content }}
-      </div>
-    </article>
-  </div>
+  {% include archive-single.html %}
 {% endfor %}

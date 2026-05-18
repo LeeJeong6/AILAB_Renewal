@@ -13,7 +13,7 @@
 {% endif %}
 
 <div class="{{ include.type | default: "list" }}__item" data-venue="{{ post.venue | escape }}" data-year="{{ post.date | default: "1900-01-01" | date: "%Y" }}">
-  <article class="archive__item{% if post.collection == 'publications' %} publication-card{% endif %}" itemscope itemtype="http://schema.org/CreativeWork">
+  <article class="archive__item{% if post.collection == 'publications' %} publication-card{% elsif post.collection == 'posts' %} news-card{% endif %}" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
         <img src=
@@ -36,9 +36,21 @@
       <div class="publication-card__text">
     {% endif %}
 
+    {% if post.collection == 'posts' and post.thumbnail %}
+      <div class="news-card__body">
+      <div class="news-card__thumbnail">
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink">
+          <img src="{{ post.thumbnail | prepend: base_path }}" alt="{{ post.title }}">
+        </a>
+      </div>
+      <div class="news-card__text">
+    {% endif %}
+
     <h2 class="archive__item-title" itemprop="headline">
       {% if post.collection == 'publications' %}
         <a href="{% if post.titleurl %}{{ post.titleurl }}{% else %}{{ base_path }}{{ post.url }}{% endif %}" rel="permalink" class="publication-title-link">{{ title }}</a>
+      {% elsif post.collection == 'posts' %}
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink" class="news-title-link">{{ title }}</a>
       {% else %}
         {{ title }}
       {% endif %}
@@ -120,6 +132,11 @@
     {% if post.collection == 'publications' and post.thumbnail %}
       </div><!-- .publication-card__text -->
       </div><!-- .publication-card__body -->
+    {% endif %}
+
+    {% if post.collection == 'posts' and post.thumbnail %}
+      </div><!-- .news-card__text -->
+      </div><!-- .news-card__body -->
     {% endif %}
 
   </article>

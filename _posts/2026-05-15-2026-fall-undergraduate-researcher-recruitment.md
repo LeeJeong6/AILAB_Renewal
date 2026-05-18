@@ -5,6 +5,7 @@ permalink: /posts/2026/05/2026-fall-undergraduate-researcher-recruitment/
 tags:
   - announcements
 thumbnail: /images/announcements/2026-undergraduate-researcher-recruitment.jpg
+excerpt: "Kookmin University AILab에서 2026년 하반기 학부연구생을 모집합니다."
 ---
 
 <div class="notice notice--info" style="margin: 0 0 1.5rem; padding: 1rem 1.25rem; text-align: center;">

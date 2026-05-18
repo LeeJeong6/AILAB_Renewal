@@ -320,6 +320,104 @@ a.announcement-card {
   }
 }
 
+.archive__item.news-card {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: $border-radius;
+  background-color: var(--global-bg-color);
+  border: 1px solid var(--global-border-color);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  transition: $global-transition;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow);
+    border-color: var(--global-link-color);
+
+    .archive__item-title {
+      text-decoration: none;
+      color: var(--global-link-color-hover);
+    }
+  }
+
+  .archive__item-title {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: $type-size-5;
+    transition: $global-transition;
+    text-decoration: none;
+  }
+
+  .news-title-link {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+      color: var(--global-link-color-hover);
+    }
+  }
+
+  .page__date {
+    margin-bottom: 0.75rem;
+    color: var(--global-text-color-light);
+    font-size: $type-size-6;
+  }
+
+  .archive__item-excerpt {
+    margin-bottom: 0;
+    font-size: 0.8em;
+    color: var(--global-text-color-light);
+
+    p {
+      color: inherit;
+      margin: 0;
+    }
+  }
+
+  .news-card__body {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+
+    @include breakpoint(max-width $small) {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+
+  .news-card__thumbnail {
+    flex-shrink: 0;
+    width: 300px;
+    aspect-ratio: 2 / 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background-color: var(--global-bg-color);
+      border-radius: $border-radius;
+      border: 1px solid var(--global-border-color);
+    }
+
+    @include breakpoint(max-width $small) {
+      width: 100%;
+      max-width: 240px;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .news-card__text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  @include breakpoint(max-width $small) {
+    padding: 1rem;
+  }
+}
+
 
 /*
    List view
